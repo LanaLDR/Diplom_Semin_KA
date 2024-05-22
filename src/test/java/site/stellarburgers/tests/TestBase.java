@@ -29,9 +29,9 @@ public class TestBase {
             AttachmentAllure.screenshotAs("Last screenshot");
             AttachmentAllure.pageSource();
             AttachmentAllure.browserConsoleLogs();
-        }
-        if (webConfig.isRemote()) {
-            AttachmentAllure.addVideo();
+            if (webConfig.isRemote()) {
+                AttachmentAllure.addVideo();
+            }
         }
         closeWebDriver();
     }
